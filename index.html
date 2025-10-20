@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>SVG - Scalable Vector Graphic</h1>
+        <img src="./images/myfirst.svg" alt="My First SVG Graphic">
+                    <!-- embedded svg code -->
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+                     <!-- SVG graphic code here -->
+              <rect width="200" height="200" fill= "#818ccf" rx="10" ry="10" stroke="#000" stroke-width="8"/>
+
+                 <ellipse cx="100" cy="100" rx="100" ry="50" fill="#fff" />
+                <ellipse cx="100" cy="100" ry="100" rx="50" fill="#fff"> </svg>
+
+            <!-- reuse elements in svg  -->
+         <svg width="200" height="200" viewBox="0 0 200 200">
+         <rect height="200" width="200" fill= "#4dd0e1" rx="10" ry="10">
+          <g class="fourDots">
+           <circle id="dot" r="25" cx="50" cy="50" fill="#red" />
+              <use href="#dot" x="100" fill="yellow"/>
+              <use href="#dot" x="100" y="100" fill="yellow"/>
+             <use href="#dot" y="100" fill="yellow"/>
+          </g>
+    
+          </svg>
+           <svg width="300" height="200" viewBox="0 0 300 200">
+        <defs>
+          <rect id="brick" width="200" height="100" fill="#CFBEE1"/>
+           <circle id="ball" r="50" fill="#8CC9BB"/>
+            </defs>
+         <use href="#brick"/>
+          <use href="#ball" x="200" y="50"/>
+        <use href="#brick" x="50" y="100"/>
+        <use href="#ball" x="50" y="150"/>
+    </svg>
+  </main>
+</body>
+</html>
